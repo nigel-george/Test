@@ -1,0 +1,33 @@
+import { StringNullableFilter } from "../../util/StringNullableFilter";
+import { DateTimeNullableFilter } from "../../util/DateTimeNullableFilter";
+import { StringFilter } from "../../util/StringFilter";
+import { BooleanNullableFilter } from "../../util/BooleanNullableFilter";
+import { FloatNullableFilter } from "../../util/FloatNullableFilter";
+import { RestaurantPhotoListRelationFilter } from "../restaurantPhoto/RestaurantPhotoListRelationFilter";
+import { RestaurantWorkingHourListRelationFilter } from "../restaurantWorkingHour/RestaurantWorkingHourListRelationFilter";
+import { TagListRelationFilter } from "../tag/TagListRelationFilter";
+import { IntNullableFilter } from "../../util/IntNullableFilter";
+import { UserFavoriteRestaurantListRelationFilter } from "../userFavoriteRestaurant/UserFavoriteRestaurantListRelationFilter";
+import { UserInteractionListRelationFilter } from "../userInteraction/UserInteractionListRelationFilter";
+
+export type RestaurantWhereInput = {
+  affordability?: StringNullableFilter;
+  contact?: StringNullableFilter;
+  createDate?: DateTimeNullableFilter;
+  email?: StringNullableFilter;
+  fullAddress?: StringNullableFilter;
+  id?: StringFilter;
+  isRegistered?: BooleanNullableFilter;
+  latitude?: FloatNullableFilter;
+  longitude?: FloatNullableFilter;
+  name?: StringNullableFilter;
+  placeId?: StringNullableFilter;
+  rating?: FloatNullableFilter;
+  restaurantPhotos?: RestaurantPhotoListRelationFilter;
+  restaurantWorkingHours?: RestaurantWorkingHourListRelationFilter;
+  tags?: TagListRelationFilter;
+  totalReviews?: IntNullableFilter;
+  updateDate?: DateTimeNullableFilter;
+  userFavoriteRestaurants?: UserFavoriteRestaurantListRelationFilter;
+  userInteractions?: UserInteractionListRelationFilter;
+};
